@@ -38,52 +38,56 @@ public class CrazyEdCheese
     {
         int cheeseYardageTotal, cheeseShipping;
 
-        if (cheeseDiameter == 1)
+        switch(cheeseDiameter)
         {
-            if (cheeseYardage <= 50)
+            case 1 :
             {
-                cheeseYardageTotal = ((cheeseYardage * 2) + (cheeseYardage * 2));
-                cheeseShipping = cheeseYardageTotal + 5;
-                System.out.println("The total shipping for your order comes to: $" + cheeseShipping);
-            }
-            else if (cheeseYardage > 50)
-            {
-                cheeseYardageTotal = (cheeseYardage * 2);
-                cheeseShipping = cheeseYardageTotal + 5;
-                System.out.println("The total shipping for your order comes to: $" + cheeseShipping);
-            }
-        }
+                if (cheeseYardage <= 50)
+                    {
+                    cheeseYardageTotal = ((cheeseYardage * 2) + (cheeseYardage * 2));
+                    cheeseShipping = cheeseYardageTotal + 5;
+                    System.out.println("The total shipping for your order comes to: $" + cheeseShipping);
+                    }
 
-        if (cheeseDiameter == 2)
-        {
-            if (cheeseYardage <= 75)
-            {
-                cheeseYardageTotal = ((cheeseYardage * 4) + (cheeseYardage * 2));
-                cheeseShipping = cheeseYardageTotal + 5;
-                System.out.println("The total shipping for your order comes to: $" + cheeseShipping);
-            }
-            else if (cheeseYardage > 50)
-            {
-                cheeseYardageTotal = (cheeseYardage * 4);
-                cheeseShipping = cheeseYardageTotal + 5;
-                System.out.println("The total shipping for your order comes to: $" + cheeseShipping);
-            }
-        }
+                else if (cheeseYardage > 50)
+                    {
+                    cheeseYardageTotal = (cheeseYardage * 2);
+                    cheeseShipping = cheeseYardageTotal + 5;
+                    System.out.println("The total shipping for your order comes to: $" + cheeseShipping);
+                    }
+            } break;
 
-        else if (cheeseDiameter == 3)
-        {
-            if (cheeseYardage <= 25)
+            case 2 :
             {
-                cheeseYardageTotal = ((cheeseYardage * 6) + (cheeseYardage * 4));
-                cheeseShipping = cheeseYardageTotal + 5;
-                System.out.println("The total shipping for your order comes to: $" + cheeseShipping);
+                if (cheeseYardage <= 75)
+                {
+                    cheeseYardageTotal = ((cheeseYardage * 4) + (cheeseYardage * 2));
+                    cheeseShipping = cheeseYardageTotal + 5;
+                    System.out.println("The total shipping for your order comes to: $" + cheeseShipping);
+                }
+                else if (cheeseYardage > 75)
+                {
+                    cheeseYardageTotal = (cheeseYardage * 4);
+                    cheeseShipping = cheeseYardageTotal + 5;
+                    System.out.println("The total shipping for your order comes to: $" + cheeseShipping);
+                } break;
             }
-            else if (cheeseYardage > 25)
+
+            case 3 :
             {
-                cheeseYardageTotal = (cheeseYardage * 6);
-                cheeseShipping = cheeseYardageTotal + 5;
-                System.out.println("The total shipping for your order comes to: $" + cheeseShipping);
-            }
+                if (cheeseYardage <= 25)
+                {
+                    cheeseYardageTotal = ((cheeseYardage * 6) + (cheeseYardage * 4));
+                    cheeseShipping = cheeseYardageTotal + 5;
+                    System.out.println("The total shipping for your order comes to: $" + cheeseShipping);
+                }
+                else if (cheeseYardage > 25)
+                {
+                    cheeseYardageTotal = (cheeseYardage * 6);
+                    cheeseShipping = cheeseYardageTotal + 5;
+                    System.out.println("The total shipping for your order comes to: $" + cheeseShipping);
+                }
+            } break;
         }
     }
 }
